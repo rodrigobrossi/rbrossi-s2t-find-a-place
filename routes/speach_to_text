@@ -1,0 +1,13 @@
+{
+  "speech_to_text": [
+    {
+      "name": "speech-to-text-puauc-speech-to--1522345368021",
+      "plan": "lite",
+      "credentials": {
+        "url": "https://stream.watsonplatform.net/speech-to-text/api",
+        "username": "edb549cc-e132-4eaa-a954-6dd1160d2797",
+        "password": "ukaB28Sacljt"
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Finda a place in the map</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/Microphone.js"></script>
+  <script type="text/javascript" src="js/SpeechToText.js"></script>
+  <script type="text/javascript" src="js/speechsearch.js"></script>
+  <script type="text/javascript" src="js/googlecall.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKdAy2hWE5R8YbTtr30J6LkczAhA_xv3Q&callback=initMap">
+    </script>
+  
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      top: 80px;
+      height: 100%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #floating-panel {
+      position: absolute;
+      top: 10px;
+      left: 35%;
+      z-index: 5;
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid #999;
+      text-align: center;
+      font-family: 'Roboto','sans-serif';
+      line-height: 30px;
+      padding-left: 10px;
+    }
+
+    #floating-panel_reverse {
+      position: absolute;
+      top: 10px;
+      left: 80%;
+      z-index: 5;
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid #999;
+      text-align: center;
+      font-family: 'Roboto','sans-serif';
+      line-height: 30px;
+      padding-left: 10px;
+    }
+    #floating-panel_reverse {
+      position: absolute;
+      top: 10px;
+      left: 70%;
+      margin-left: -180px;
+      width: 350px;
+      z-index: 5;
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid #999;
+    }
+    #latlng {
+      width: 225px;
+    }
+
+  </style>
+</head>
+<body>
+
+<label for="searchWidget">Search adress from IBM:</label>
+<div id="searchWidget">
+  <input id="search" type="search" autocomplete="off" autofocus>
+  <span id="microphone"></span>
+</div>
+<div id="floating-panel">
+  <input id="address" type="textbox" value="São Paulo">
+  <input id="submit" type="button" value="Geocode">
+</div>
+<div id="floating-panel_reverse">
+    <input id="latlng" type="text" value="-23.5505199, -46.63330939999997">
+    <input id="submit2" type="button" value="Reverse Geocode">
+  </div>
+
+<div id="map"></div>
+
+</body>
+</html>
